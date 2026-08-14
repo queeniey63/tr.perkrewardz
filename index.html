@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#ffffff !important;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Claim Your $750 Target Gift Card</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background-color: #ffffff !important; color-scheme: light !important; }
+
+  body {
+    background-color: #fff5f5 !important;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 480px;
+    padding: 0 0 60px;
+  }
+
+  /* ── HERO BANNER ── */
+  .hero-banner {
+    background: linear-gradient(160deg, #8B0000 0%, #CC0000 60%, #e84040 100%);
+    padding: 40px 24px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 220px;
+  }
+
+  /* Floating gift card */
+  .gift-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 22px 18px;
+    width: 88%;
+    max-width: 320px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+    transform: rotate(-2deg);
+    position: relative;
+  }
+
+  .card-dots {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+
+  .card-dots span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    display: block;
+  }
+
+  .card-top-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .spark-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #CC0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .spark-badge svg { width: 18px; height: 18px; }
+
+  .card-brand {
+    font-size: 20px;
+    font-weight: 900;
+    color: #CC0000;
+  }
+
+  .card-amount {
+    font-size: 52px;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 4px;
+    letter-spacing: -2px;
+  }
+
+  .card-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-type {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #999;
+    text-transform: uppercase;
+  }
+
+  .card-chip {
+    width: 34px;
+    height: 24px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFC220, #e6a800);
+  }
+
+  /* ── OFFER CARD ── */
+  .offer-card {
+    background: #ffffff;
+    border-radius: 24px 24px 0 0;
+    margin-top: -36px;
+    padding: 32px 24px 28px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+  }
+
+  .exclusive-badge {
+    display: inline-block;
+    border: 1.5px solid #CC0000;
+    border-radius: 99px;
+    padding: 5px 16px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #CC0000;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .offer-title {
+    font-size: 30px;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .offer-title .highlight {
+    display: inline-block;
+    background: #CC0000;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 2px 12px;
+    margin: 0 4px;
+  }
+
+  .offer-sub {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 17px;
+    background: #CC0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,113,206,0.4);
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .cta-btn:hover { background: #990000; transform: translateY(-1px); }
+  .cta-btn:active { transform: translateY(0); }
+
+  /* ── STEPS ── */
+  .steps-section {
+    background: #ffffff;
+    margin: 12px 0 0;
+    padding: 24px 20px;
+  }
+
+  .steps-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .step {
+    background: #fff5f5;
+    border: 1.5px solid #ffe0e0;
+    border-radius: 12px;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+
+  .step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #CC0000;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-content h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+  }
+
+  .step-content p {
+    font-size: 11.5px;
+    color: #999;
+  }
+
+  /* ── COMMENTS ── */
+  .comments-section {
+    background: #ffffff;
+    margin: 12px 0 0;
+    padding: 24px 20px;
+  }
+
+  .comments-header {
+    margin-bottom: 16px;
+  }
+
+  .comments-header h2 {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 3px;
+  }
+
+  .comments-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .comments-count {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .comments-sort {
+    font-size: 12px;
+    color: #555;
+    font-weight: 600;
+  }
+
+  .comments-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin: 12px 0 16px;
+  }
+
+  .comment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .comment:last-child { margin-bottom: 0; }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  .comment-body { flex: 1; }
+
+  .comment-name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+
+  .comment-name.brand {
+    color: #CC0000;
+  }
+
+  .comment-bubble {
+    background: #f2f4f8;
+    border-radius: 4px 14px 14px 14px;
+    padding: 11px 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .comment-bubble.brand-bubble {
+    background: #fdeaea;
+    border-radius: 14px 4px 14px 14px;
+  }
+
+  .comment-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 7px;
+  }
+
+  .comment-time {
+    font-size: 11px;
+    color: #aaa;
+  }
+
+  .comment-actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  .comment-actions span {
+    font-size: 11px;
+    color: #999;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .comment-likes {
+    margin-left: auto;
+    font-size: 11px;
+    color: #CC0000;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html, body, .page, .offer-card, .steps-section, .comments-section, .step {
+      background-color: #ffffff !important;
+      color: #1a1a1a !important;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero-banner">
+    <div class="gift-card">
+      <div class="card-dots">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="card-top-row">
+        <div class="spark-badge" style="background:#CC0000;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;position:relative;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <circle cx="50" cy="50" r="48" fill="#CC0000"/>
+            <circle cx="50" cy="50" r="30" fill="#ffffff"/>
+            <circle cx="50" cy="50" r="14" fill="#CC0000"/>
+          </svg>
+        </div>
+        <span class="card-brand">Target</span>
+      </div>
+      <div class="card-amount">$750</div>
+      <div class="card-bottom-row">
+        <span class="card-type">Gift Card</span>
+        <div class="card-chip"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFER -->
+  <div class="offer-card">
+    <div class="exclusive-badge">Exclusive Offer</div>
+    <div class="offer-title">
+      Claim a <span class="highlight">$750</span><br>Target Gift Card
+    </div>
+    <p class="offer-sub">We're looking for shoppers in your area to share their shopping habits and preferences.</p>
+    <a href="https://giftclick.org/aff_c?offer_id=1178&aff_id=188450" target="_blank" rel="noopener" class="cta-btn">Get Started &rsaquo;</a>
+  </div>
+
+
+
+  <!-- COMMENTS -->
+  <div class="comments-section">
+    <div class="comments-header">
+      <h2>Community Feedback</h2>
+      <div class="comments-meta">
+        <span class="comments-count">58 comments</span>
+        <span class="comments-sort">Sort by Newest ↓</span>
+      </div>
+    </div>
+    <div class="comments-divider"></div>
+
+    <!-- Comment 1 -->
+    <div class="comment">
+      <div class="avatar" style="background:#7b5ea7;">M</div>
+      <div class="comment-body">
+        <div class="comment-name">Marcus Webb</div>
+        <div class="comment-bubble">Did this on my lunch break. Card was in my email before I even got home 🙌</div>
+        <div class="comment-footer">
+          <span class="comment-time">2 days ago</span>
+          <div class="comment-actions"><span>Like</span><span>Reply</span></div>
+          <span class="comment-likes">👍 87</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment 2 - Brand reply -->
+    <div class="comment" style="margin-left:50px;">
+      <div class="avatar" style="background:#CC0000;">T</div>
+      <div class="comment-body">
+        <div class="comment-name brand">Target Rewards Team</div>
+        <div class="comment-bubble brand-bubble">Love hearing that, Marcus! Enjoy your card 🎉</div>
+        <div class="comment-footer">
+          <span class="comment-time">Just now</span>
+          <div class="comment-actions"><span>Like</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment 3 -->
+    <div class="comment">
+      <div class="avatar" style="background:#c0392b;">R</div>
+      <div class="comment-body">
+        <div class="comment-name">Rachel Simmons</div>
+        <div class="comment-bubble">Groceries have gotten so expensive lately. This literally saved my whole grocery run. Already planning my next haul 🛒</div>
+        <div class="comment-footer">
+          <span class="comment-time">3 days ago</span>
+          <div class="comment-actions"><span>Like</span><span>Reply</span></div>
+          <span class="comment-likes">👍 61</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment 4 -->
+    <div class="comment">
+      <div class="avatar" style="background:#2e7d5e;">J</div>
+      <div class="comment-body">
+        <div class="comment-name">Jerome Okafor</div>
+        <div class="comment-bubble">I was skeptical at first but my cousin told me she did it and got hers. Went ahead and tried — no regrets. Super straightforward 💯</div>
+        <div class="comment-footer">
+          <span class="comment-time">4 days ago</span>
+          <div class="comment-actions"><span>Like</span><span>Reply</span></div>
+          <span class="comment-likes">👍 44</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment 5 -->
+    <div class="comment">
+      <div class="avatar" style="background:#e67e22;">S</div>
+      <div class="comment-body">
+        <div class="comment-name">Sandra Flores</div>
+        <div class="comment-bubble">Used it to stock up on school supplies and snacks for the kids. Between this and the Circle Week deals — feeling good about the week ahead 😊</div>
+        <div class="comment-footer">
+          <span class="comment-time">5 days ago</span>
+          <div class="comment-actions"><span>Like</span><span>Reply</span></div>
+          <span class="comment-likes">👍 39</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment 6 -->
+    <div class="comment">
+      <div class="avatar" style="background:#546e7a;">D</div>
+      <div class="comment-body">
+        <div class="comment-name">Devon Price</div>
+        <div class="comment-bubble">Honestly smoother than I expected. Already used the card on my weekly Target run. Worth every step 💪</div>
+        <div class="comment-footer">
+          <span class="comment-time">1 week ago</span>
+          <div class="comment-actions"><span>Like</span><span>Reply</span></div>
+          <span class="comment-likes">👍 33</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment 7 -->
+    <div class="comment">
+      <div class="avatar" style="background:#6d4c41;">A</div>
+      <div class="comment-body">
+        <div class="comment-name">Amber Nguyen</div>
+        <div class="comment-bubble">Got mine last week. Just used it on cleaning stuff and toiletries — things I needed anyway. Walked out of Target with a full cart 🛍️</div>
+        <div class="comment-footer">
+          <span class="comment-time">1 week ago</span>
+          <div class="comment-actions"><span>Like</span><span>Reply</span></div>
+          <span class="comment-likes">👍 28</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment 8 -->
+    <div class="comment">
+      <div class="avatar" style="background:#37474f;">K</div>
+      <div class="comment-body">
+        <div class="comment-name">Kevin Marsh</div>
+        <div class="comment-bubble">Did the steps while watching TV. Barely noticed the time passing. Card showed up the next morning. Easy win.</div>
+        <div class="comment-footer">
+          <span class="comment-time">2 weeks ago</span>
+          <div class="comment-actions"><span>Like</span><span>Reply</span></div>
+          <span class="comment-likes">👍 19</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
