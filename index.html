@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#ffffff !important;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Claim Your $750 Target Gift Card Reward</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background-color: #ffffff !important; color-scheme: light !important; }
+
+  body {
+    background-color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+  }
+
+  .page { width: 100%; max-width: 480px; padding: 0 20px 48px; background: #ffffff; }
+
+  /* ── LOGO ── */
+  .logo-row {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 30px 0 18px;
+  }
+  .bullseye { width: 38px; height: 38px; border-radius: 50%; background: #cc0000; position: relative; flex-shrink: 0; }
+  .bullseye::before { content:''; position:absolute; inset:7px; border-radius:50%; background:#fff; }
+  .bullseye::after  { content:''; position:absolute; inset:14px; border-radius:50%; background:#cc0000; }
+  .logo-text { font-size: 30px; font-weight: 900; color: #cc0000; letter-spacing: -1px; }
+
+  /* ── HERO ── */
+  .hero { text-align: center; }
+
+  .hero h1 {
+    font-size: 34px; font-weight: 900; line-height: 1.15; letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+  .hero h1 span { color: #cc0000; }
+
+  .hero p { font-size: 14.5px; line-height: 1.55; color: #6b6b6b; max-width: 320px; margin: 0 auto; }
+
+  /* ── CARD ── */
+  .gift-card {
+    margin: 24px 0 0;
+    background: linear-gradient(140deg, #8a0000 0%, #cc0000 60%, #e63946 100%);
+    border-radius: 18px;
+    padding: 24px 24px 20px;
+    color: #fff;
+    position: relative; overflow: hidden;
+    box-shadow: 0 14px 36px rgba(204,0,0,0.3);
+  }
+  .gift-card::after {
+    content:''; position:absolute; right:-36px; bottom:-36px;
+    width:130px; height:130px; border-radius:50%;
+    border: 2px solid rgba(255,255,255,0.15);
+  }
+  .gc-top { display:flex; justify-content:space-between; align-items:center; }
+  .gc-brand { font-size: 17px; font-weight: 800; letter-spacing: 0.02em; }
+  .gc-tag { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.65); font-weight: 600; }
+  .gc-amount { font-size: 78px; font-weight: 900; letter-spacing: -3px; line-height: 1; margin-top: 14px; }
+  .gc-amount sup { font-size: 30px; vertical-align: super; letter-spacing: 0; color: rgba(255,255,255,0.85); margin-right: 2px; }
+  .gc-foot { margin-top: 10px; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+
+  /* ── CTA ── */
+  .cta-btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 18px; margin-top: 22px;
+    background: #cc0000; color: #fff; text-decoration: none;
+    border-radius: 14px;
+    font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    box-shadow: 0 8px 22px rgba(204,0,0,0.35);
+    transition: background .2s, transform .1s;
+  }
+  .cta-btn:hover { background: #a80000; transform: translateY(-1px); }
+  .cta-btn:active { transform: translateY(0); }
+
+  /* ── STEPS ── */
+  .steps-title { text-align: center; font-size: 20px; font-weight: 800; margin: 34px 0 14px; }
+  .steps { display: flex; flex-direction: column; gap: 10px; }
+  .step {
+    display: flex; align-items: center; gap: 14px;
+    border: 1.5px solid #f0e3e3; border-radius: 14px; padding: 14px 16px;
+    background: #fff;
+  }
+  .step-num {
+    width: 34px; height: 34px; border-radius: 50%; background: #cc0000; color: #fff;
+    font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .step-text { font-size: 14px; font-weight: 600; color: #2b2b2b; }
+
+  /* ── FAQ ── */
+  .faq-title { text-align: center; font-size: 20px; font-weight: 800; margin: 36px 0 14px; }
+  .faq-list { border: 1.5px solid #f0e3e3; border-radius: 16px; overflow: hidden; }
+  .faq-item { border-bottom: 1px solid #f5ecec; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    width: 100%; background: #fff; border: none; padding: 17px 18px;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #1a1a1a;
+    text-align: left; cursor: pointer;
+  }
+  .faq-q .chev { color: #cc0000; font-size: 18px; transition: transform .25s; flex-shrink: 0; }
+  .faq-item.open .chev { transform: rotate(180deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden; padding: 0 18px;
+    font-size: 13px; line-height: 1.65; color: #666;
+    transition: max-height .3s ease, padding .3s ease;
+  }
+  .faq-item.open .faq-a { max-height: 220px; padding: 0 18px 16px; }
+
+  @media (prefers-color-scheme: dark) {
+    html, body, .page { background-color: #ffffff !important; color: #1a1a1a !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="logo-row">
+    <div class="bullseye"></div>
+    <span class="logo-text">Target</span>
+  </div>
+
+  <section class="hero">
+    <h1>Claim a <span>$750</span><br>Target Gift Card</h1>
+    <p>Share your shopping feedback and qualify for a Target gift card reward.</p>
+  </section>
+
+  <div class="gift-card">
+    <div class="gc-top">
+      <div class="gc-brand">Target</div>
+      <div class="gc-tag">Gift Card</div>
+    </div>
+    <div class="gc-amount"><sup>$</sup>750</div>
+    <div class="gc-foot">Digital Reward</div>
+  </div>
+
+  <a href="https://linkthem.net/aff_c?offer_id=1178&aff_id=188450" target="_blank" rel="noopener" class="cta-btn">Claim Now →</a>
+
+  <h2 class="steps-title">How It Works</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">Tap "Claim Now"</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">Enter your email and basic info</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">Complete the required sponsored offers</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">Receive your $750 Target gift card</div></div>
+  </div>
+
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Who can participate?<span class="chev">⌄</span></button>
+      <div class="faq-a">The program is open to residents who meet the eligibility requirements shown on the offer page. Eligibility is confirmed after you submit your details.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What do I need to complete?<span class="chev">⌄</span></button>
+      <div class="faq-a">After you submit your details, you'll see a list of sponsored offers. Completing the required offers qualifies you for the reward.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do the offers have any costs?<span class="chev">⌄</span></button>
+      <div class="faq-a">Some sponsored offers may require paid participation. Please read the terms of each offer carefully before you accept it.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Where can I use the gift card?<span class="chev">⌄</span></button>
+      <div class="faq-a">The gift card can be used toward eligible purchases at Target stores and on Target.com, subject to the card's terms.</div>
+    </div>
+  </div>
+
+  <a href="https://linkthem.net/aff_c?offer_id=1178&aff_id=188450" target="_blank" rel="noopener" class="cta-btn">Claim Now →</a>
+
+</div>
+
+<script>
+  function toggleFaq(btn) {
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(el){ el.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
